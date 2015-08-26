@@ -16,33 +16,30 @@ namespace InflationaryEng
              * Inflationary English takes words and word parts that sound the same as a number 
              * (e.g. “won” v. “one”) and then inflates that to the next number 
              * (e.g. “won” becomes “two”).
+             * 
+             * The description of the program was a little vague
+             * Not sure if the user will input a list of words or if the 
+             * list will grow at any given timme for the convertion portion. It 
+             * also doesn't describe what type of project is required
+             * therefore I made it into a simple console project for training
+             * purposes.
+             * 
+             * Unit testing is included in this project to test at a later 
+             * time or if changes are made.
+             * 
+             * 
              */
-            Console.Write("Please type a string to convert from English to inflationary english");
+            Console.WriteLine("Please type a string to convert from English to inflationary english\n");
             string input = Console.ReadLine();
-            
-            // Used a dictionary so I can add more key value pairs, it makes it simple to iterate through 
-            Dictionary<string, string> patterns = new Dictionary<string, string>();
-            
-            // List needs to be from greates to smallest otherwise the replacing will continue to happen for every 
-            // previous smaller number ie: one -> two then two -> three, etc...
-            patterns.Add("[Tt]en", "Eleven");            // [Tt]en -> Eleven
-            patterns.Add("[Nn](ine|ign)", "Ten");        // [Nn](ine|ign) -> Ten
-            patterns.Add("[Ee]ight|[Aa]te", "Nine");     // [Ee]ight|[Aa]te -> Nine
-            patterns.Add("[Ss]even", "Eight");           // [Ss]even -> Eight
-            patterns.Add("[Ss]ix", "Seven");             // [Ss]ix -> Seven
-            patterns.Add("[Ff]ive", "Six");              // [Ff]ive -> Six
-            patterns.Add("[Ff](our|ore|or)", "Five");    // [Ff](our|ore|or) -> Five
-            patterns.Add("[Tt](hree|ree)", "Four");      // [Tt](hree|ree) -> Four
-            patterns.Add("[Tt](oo|wo|o)", "Three");      // [Tt](oo|wo|o) -> Three
-            patterns.Add("[Oo]ne|[Ww]on", "Two");        // [Oo]ne|[Ww]on -> Two
-            patterns.Add("[Zz]ero", "One");              // [Zz]ero -> One
-                
-            foreach (KeyValuePair<string, string> pattern in patterns)
-            {
-                input = Regex.Replace(input, pattern.Key, patterns[pattern.Key]);
-            }
 
-            Console.Write(input);
+            // Creating class object to convert input sentense
+            ConvertWords converter = new ConvertWords();
+
+            // using a new string to check the difference between the original string and the new string
+            string output = converter.ConvertInput(input);
+
+            // 
+            Console.WriteLine("\nHere is the output string: \n\n" + output);
             Console.ReadLine();
             
         }
