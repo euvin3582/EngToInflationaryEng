@@ -1,0 +1,6 @@
+c:\users\leanne\documents\visual studio 2012\Projects\InflationaryEng\InflationaryEng\bin\Debug\InflationaryEng.exe.config
+c:\users\leanne\documents\visual studio 2012\Projects\InflationaryEng\InflationaryEng\bin\Debug\InflationaryEng.exe
+c:\users\leanne\documents\visual studio 2012\Projects\InflationaryEng\InflationaryEng\bin\Debug\InflationaryEng.pdb
+c:\users\leanne\documents\visual studio 2012\Projects\InflationaryEng\InflationaryEng\obj\Debug\InflationaryEng.csprojResolveAssemblyReference.cache
+c:\users\leanne\documents\visual studio 2012\Projects\InflationaryEng\InflationaryEng\obj\Debug\InflationaryEng.exe
+c:\users\leanne\documents\visual studio 2012\Projects\InflationaryEng\InflationaryEng\obj\Debug\InflationaryEng.pdb
